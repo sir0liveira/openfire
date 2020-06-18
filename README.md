@@ -1,7 +1,7 @@
 # Openfire
 ## Arquivos para usar com o Docker
 - conf.sh
-- docker-composer.yaml
+- docker-compose.yaml
 
 ### Caso queira baixar a imagem acesse o DockerHub, segue o link:
 
