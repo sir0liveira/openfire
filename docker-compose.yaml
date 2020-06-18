@@ -1,4 +1,4 @@
-version: "3.7"
+version: "3.4"
 services:
   app-openfire:
     image: "sir0liveira/openfire:latest"
@@ -9,18 +9,12 @@ services:
     ports:     
       - "5222:5222/tcp"
       - "5223:5223/tcp"
-      - "5229:5229/tcp"
-      - "5262:5262/tcp"
-      - "5263:5263/tcp"
       - "5269:5269/tcp"
-      - "5270:5270/tcp"
-      - "5275:5275/tcp"
-      - "5276:5276/tcp"
-      - "7070:7070/tcp"
       - "7443:7443/tcp"
-      - "7777:7777/tcp"
+      - "9090:9090/tcp"
+      - "9091:9091/tcp"
     volumes:
-      - /usr/src/.docker/openfire:/var/lib/openfire
+      - ./openfire:/var/lib/openfire
     networks:
       - my_net
 
@@ -32,7 +26,7 @@ services:
     ports:
       - 3306:3306
     volumes:
-      - /usr/src/.docker/openfire/mysql:/var/lib/mysql
+      - ./openfire/mysql:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: 123@mudar
       MYSQL_DATABASE: openfire
