@@ -1,3 +1,4 @@
+![GitHub repo size](https://img.shields.io/github/repo-size/sir0liveira/openfire) ![GitHub](https://img.shields.io/github/license/sir0liveira/openfire) ![GitHub language count](https://img.shields.io/github/languages/count/sir0liveira/openfire) ![GitHub top language](https://img.shields.io/github/languages/top/sir0liveira/openfire)
 # Openfire
 ## Arquivos para usar com o Docker
 - conf.sh
