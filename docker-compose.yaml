@@ -1,0 +1,46 @@
+version: "3.7"
+services:
+  app-openfire:
+    image: "openfire:4.5.2"
+    container_name: openfire
+    hostname: localhost
+    restart: unless-stopped
+    tty: true
+    ports:     
+      - "5222:5222/tcp"
+      - "5223:5223/tcp"
+      - "5229:5229/tcp"
+      - "5262:5262/tcp"
+      - "5263:5263/tcp"
+      - "5269:5269/tcp"
+      - "5270:5270/tcp"
+      - "5275:5275/tcp"
+      - "5276:5276/tcp"
+      - "7070:7070/tcp"
+      - "7443:7443/tcp"
+      - "7777:7777/tcp"
+    volumes:
+      - /usr/src/.docker/openfire:/var/lib/openfire
+    networks:
+      - my_net
+
+  app-mysql:
+    image: "mysql"
+    container_name: mysql
+    restart: unless-stopped
+    tty: true
+    ports:
+      - 3306:3306
+    volumes:
+      - /usr/src/.docker/openfire/mysql:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 123@mudar
+      MYSQL_DATABASE: openfire
+      MYSQL_USER: openfire
+      MYSQL_PASSWORD: openfire
+    networks:
+      - my_net
+
+networks:
+  my_net:
+    driver: bridge
