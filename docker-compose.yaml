@@ -25,7 +25,7 @@ services:
     restart: unless-stopped
     tty: true
     ports:
-      - 3306:3306
+      - "3306:3306/tcp"
     volumes:
       - ./openfire/mysql:/var/lib/mysql
     environment:
