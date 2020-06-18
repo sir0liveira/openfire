@@ -19,6 +19,20 @@ sudo docker-compose up
 
 Lembrando que o openfire e também o mysql vão persistir os dados na pasta "openfire" criada no diretório onde o comando foi executado.
 
+### O banco criado é o openfire, seguem os dados:
+
+MYSQL_ROOT_PASSWORD: 123@mudar (senha do root no MYSQL)
+
+MYSQL_DATABASE: openfire (nome do banco)
+
+MYSQL_USER: openfire (usuário do banco)
+
+MYSQL_PASSWORD: openfire (senha do usuário)
+
+#### Obs. Modifique as senhas conforme sua necessidade.
+
+Ex. DB Connection URL: jdbc:mysql://172.20.0.3:3306/openfire?rewriteBatchedStatements=true&characterEncoding=UTF-8&characterSetResults=UTF-8&serverTimezone=UTC
+
 ### Acesse o openfire:
 
 localhost:9090
