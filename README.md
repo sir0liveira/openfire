@@ -32,7 +32,7 @@ MYSQL_PASSWORD: openfire (senha do usuário)
 
 #### Obs. Modifique as senhas conforme sua necessidade.
 
-Ex. DB Connection URL: jdbc:mysql://172.20.0.3:3306/openfire?rewriteBatchedStatements=true&characterEncoding=UTF-8&characterSetResults=UTF-8&serverTimezone=UTC
+Ex. DB Connection URL: jdbc:mysql://mysql:3306/openfire?rewriteBatchedStatements=true&characterEncoding=UTF-8&characterSetResults=UTF-8&serverTimezone=UTC
 
 ### Acesse o openfire:
 
