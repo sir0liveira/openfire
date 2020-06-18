@@ -19,8 +19,9 @@ services:
       - my_net
 
   app-mysql:
-    image: "mysql"
+    image: "mysql:latest"
     container_name: mysql
+    hostname: mysql
     restart: unless-stopped
     tty: true
     ports:
