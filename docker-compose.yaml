@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   app-openfire:
-    image: "openfire:4.5.2"
+    image: "sir0liveira/openfire:latest"
     container_name: openfire
     hostname: localhost
     restart: unless-stopped
